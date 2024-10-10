@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "144469176232",
+    "project_id": "gdg-dit-rlb405",
+    "storage_bucket": "gdg-dit-rlb405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144469176232:android:527cdc6f1917c3f084779d",
+        "android_client_info": {
+          "package_name": "com.gdg.dit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVbK__XnjmsHvJSjSTqbW4gjPKV7cXbKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
