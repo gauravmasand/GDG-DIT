@@ -307,6 +307,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'UpcommingEvents',
           path: '/upcommingEvents',
           builder: (context, params) => UpcommingEventsWidget(),
+        ),
+        FFRoute(
+          name: 'memberProfile',
+          path: '/memberProfile',
+          builder: (context, params) => MemberProfileWidget(
+            json: params.getParam(
+              'json',
+              ParamType.JSON,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

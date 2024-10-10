@@ -31,3 +31,5 @@ export '/chat_group/image_details/image_details_widget.dart'
 export '/pages/past_events/past_events_widget.dart' show PastEventsWidget;
 export '/pages/upcomming_events/upcomming_events_widget.dart'
     show UpcommingEventsWidget;
+export '/pages/member_profile/member_profile_widget.dart'
+    show MemberProfileWidget;

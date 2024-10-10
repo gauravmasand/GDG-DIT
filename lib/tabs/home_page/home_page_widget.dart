@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -832,7 +833,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       shape: BoxShape.circle,
                                     ),
                                     child: Image.network(
-                                      'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
+                                      'https://drive.google.com/open?id=1DDhDAwF7kP9xHTXtl2i6SmsjihcINtbL',
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -840,7 +841,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Text(
-                                      'Meet Agarwal',
+                                      'Onkar Vinodrao Wattamwar',
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
@@ -854,55 +855,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         0.0, 4.0, 0.0, 0.0),
                                     child: Text(
                                       'Co Leader',
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily: 'Inter Tight',
-                                            fontSize: 16.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    width: 100.0,
-                                    height: 100.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.network(
-                                      'https://media.licdn.com/dms/image/v2/D4D03AQG91AHqIMMcLQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699872403012?e=1733356800&v=beta&t=DybyjOYXEMydCBJtIwkTx97n3L0Pig57aHws1VipVCo',
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 8.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Gaurav Masand',
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily: 'Inter Tight',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 4.0, 0.0, 0.0),
-                                    child: Text(
-                                      'Flutter Leader',
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
@@ -946,568 +898,109 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         decoration: BoxDecoration(
                           color: Color(0x72F1F4F8),
                         ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: ListView(
-                            padding: EdgeInsets.symmetric(vertical: 18.0),
-                            primary: false,
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                        child: Builder(
+                          builder: (context) {
+                            final memeber = functions.getMembersData().toList();
+
+                            return GridView.builder(
+                              padding: EdgeInsets.zero,
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 10.0,
+                                mainAxisSpacing: 10.0,
+                                childAspectRatio: 0.65,
                               ),
-                              Container(
-                                decoration: BoxDecoration(),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
+                              primary: false,
+                              shrinkWrap: true,
+                              scrollDirection: Axis.vertical,
+                              itemCount: memeber.length,
+                              itemBuilder: (context, memeberIndex) {
+                                final memeberItem = memeber[memeberIndex];
+                                return Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed(
+                                        'memberProfile',
+                                        queryParameters: {
+                                          'json': serializeParam(
+                                            memeberItem,
+                                            ParamType.JSON,
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
+                                        }.withoutNulls,
+                                      );
+                                    },
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 90.0,
+                                          height: 90.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
+                                          child: Image.network(
+                                            getJsonField(
+                                              memeberItem,
+                                              r'''$.Upload_your_profile_pic''',
+                                            ).toString(),
+                                            fit: BoxFit.cover,
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 8.0, 0.0, 0.0),
+                                          child: Text(
+                                            getJsonField(
+                                              memeberItem,
+                                              r'''$.Name''',
+                                            ).toString(),
+                                            textAlign: TextAlign.center,
+                                            maxLines: 1,
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleLarge
+                                                .override(
+                                                  fontFamily: 'Inter Tight',
+                                                  fontSize: 15.0,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 2.0, 0.0, 0.0),
+                                          child: Text(
+                                            getJsonField(
+                                              memeberItem,
+                                              r'''$.Role''',
+                                            ).toString(),
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleLarge
+                                                .override(
+                                                  fontFamily: 'Inter Tight',
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 90.0,
-                                            height: 90.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.network(
-                                              'https://media.licdn.com/dms/image/v2/D4D03AQF0vMaUiYdeag/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712509150817?e=1733356800&v=beta&t=zVE5WpLibKMMSFEpbIk1VRr7ipNtrnoeq1v1sWIvAQM',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 8.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Meet Agarwal',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 15.0,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 2.0, 0.0, 0.0),
-                                            child: Text(
-                                              'Leader',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleLarge
-                                                      .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
-                                                        fontSize: 12.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ].divide(SizedBox(height: 18.0)),
-                          ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                         ),
                       ),
                     ),
