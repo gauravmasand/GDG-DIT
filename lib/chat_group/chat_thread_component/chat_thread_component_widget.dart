@@ -70,16 +70,14 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
         children: [
           Expanded(
             child: StreamBuilder<List<ChatMessagesRecord>>(
-              stream: FFAppState().detailChat(
-                requestFn: () => queryChatMessagesRecord(
-                  queryBuilder: (chatMessagesRecord) => chatMessagesRecord
-                      .where(
-                        'chat',
-                        isEqualTo: widget!.chatRef?.reference,
-                      )
-                      .orderBy('timestamp', descending: true),
-                  limit: 200,
-                ),
+              stream: queryChatMessagesRecord(
+                queryBuilder: (chatMessagesRecord) => chatMessagesRecord
+                    .where(
+                      'chat',
+                      isEqualTo: widget!.chatRef?.reference,
+                    )
+                    .orderBy('timestamp', descending: true),
+                limit: 200,
               )..listen((snapshot) {
                   List<ChatMessagesRecord> listViewChatMessagesRecordList =
                       snapshot;

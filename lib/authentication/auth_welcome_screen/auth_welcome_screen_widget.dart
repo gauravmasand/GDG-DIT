@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -406,14 +407,36 @@ class _AuthWelcomeScreenWidgetState extends State<AuthWelcomeScreenWidget>
                                             alignment:
                                                 AlignmentDirectional(0.0, 0.0),
                                             children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/DevChef_Posters_(5).png',
-                                                  width: double.infinity,
-                                                  height: 80.0,
-                                                  fit: BoxFit.fitHeight,
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  GoRouter.of(context)
+                                                      .prepareAuthEvent();
+                                                  final user = await authManager
+                                                      .signInWithGoogle(
+                                                          context);
+                                                  if (user == null) {
+                                                    return;
+                                                  }
+
+                                                  context.goNamedAuth(
+                                                      'HomePage',
+                                                      context.mounted);
+                                                },
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.asset(
+                                                    'assets/images/DevChef_Posters_(5).png',
+                                                    width: double.infinity,
+                                                    height: 80.0,
+                                                    fit: BoxFit.fitHeight,
+                                                  ),
                                                 ),
                                               ),
                                             ],

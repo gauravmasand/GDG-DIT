@@ -83,19 +83,4 @@ class FFAppState extends ChangeNotifier {
   void clearChatsCache() => _chatsManager.clear();
   void clearChatsCacheKey(String? uniqueKey) =>
       _chatsManager.clearRequest(uniqueKey);
-
-  final _detailChatManager = StreamRequestManager<List<ChatMessagesRecord>>();
-  Stream<List<ChatMessagesRecord>> detailChat({
-    String? uniqueQueryKey,
-    bool? overrideCache,
-    required Stream<List<ChatMessagesRecord>> Function() requestFn,
-  }) =>
-      _detailChatManager.performRequest(
-        uniqueQueryKey: uniqueQueryKey,
-        overrideCache: overrideCache,
-        requestFn: requestFn,
-      );
-  void clearDetailChatCache() => _detailChatManager.clear();
-  void clearDetailChatCacheKey(String? uniqueKey) =>
-      _detailChatManager.clearRequest(uniqueKey);
 }
