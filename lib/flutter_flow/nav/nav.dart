@@ -503,10 +503,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/DIT-removebg-preview.png',
-                    fit: BoxFit.contain,
+                    'assets/images/splash_screen_(2).png',
+                    fit: BoxFit.cover,
                   ),
                 )
               : page;

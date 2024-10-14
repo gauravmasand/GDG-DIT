@@ -745,7 +745,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   children: [
                     Container(
                       width: double.infinity,
-                      height: 700.0,
+                      height: 600.0,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
@@ -758,7 +758,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                     Container(
                       width: double.infinity,
-                      height: 700.0,
+                      height: 600.0,
                       decoration: BoxDecoration(
                         color: Color(0x72F1F4F8),
                       ),
@@ -878,7 +878,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   children: [
                     Container(
                       width: double.infinity,
-                      height: 540.0,
+                      height: 1300.0,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
@@ -894,7 +894,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                       child: Container(
                         width: double.infinity,
-                        height: 540.0,
                         decoration: BoxDecoration(
                           color: Color(0x72F1F4F8),
                         ),
@@ -917,84 +916,93 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               itemCount: memeber.length,
                               itemBuilder: (context, memeberIndex) {
                                 final memeberItem = memeber[memeberIndex];
-                                return Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed(
-                                        'memberProfile',
-                                        queryParameters: {
-                                          'json': serializeParam(
-                                            memeberItem,
-                                            ParamType.JSON,
-                                          ),
-                                        }.withoutNulls,
-                                      );
-                                    },
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          width: 90.0,
-                                          height: 90.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            getJsonField(
+                                return Container(
+                                  decoration: BoxDecoration(),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                          'memberProfile',
+                                          queryParameters: {
+                                            'json': serializeParam(
                                               memeberItem,
-                                              r'''$.Upload_your_profile_pic''',
-                                            ).toString(),
-                                            fit: BoxFit.cover,
+                                              ParamType.JSON,
+                                            ),
+                                          }.withoutNulls,
+                                        );
+                                      },
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 90.0,
+                                            height: 90.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              getJsonField(
+                                                memeberItem,
+                                                r'''$.Upload_your_profile_pic''',
+                                              ).toString(),
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 8.0, 0.0, 0.0),
-                                          child: Text(
-                                            getJsonField(
-                                              memeberItem,
-                                              r'''$.Name''',
-                                            ).toString(),
-                                            textAlign: TextAlign.center,
-                                            maxLines: 1,
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleLarge
-                                                .override(
-                                                  fontFamily: 'Inter Tight',
-                                                  fontSize: 15.0,
-                                                  letterSpacing: 0.0,
-                                                ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 8.0, 0.0, 0.0),
+                                            child: Text(
+                                              getJsonField(
+                                                memeberItem,
+                                                r'''$.Name''',
+                                              ).toString(),
+                                              textAlign: TextAlign.center,
+                                              maxLines: 1,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Inter Tight',
+                                                        fontSize: 15.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
                                           ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 2.0, 0.0, 0.0),
-                                          child: Text(
-                                            getJsonField(
-                                              memeberItem,
-                                              r'''$.Role''',
-                                            ).toString(),
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleLarge
-                                                .override(
-                                                  fontFamily: 'Inter Tight',
-                                                  fontSize: 12.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.normal,
-                                                ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 2.0, 0.0, 0.0),
+                                            child: Text(
+                                              getJsonField(
+                                                memeberItem,
+                                                r'''$.Role''',
+                                              ).toString(),
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLarge
+                                                      .override(
+                                                        fontFamily:
+                                                            'Inter Tight',
+                                                        fontSize: 12.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 );

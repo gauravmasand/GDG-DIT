@@ -292,8 +292,7 @@ class _Auth5CreateWidgetState extends State<Auth5CreateWidget> {
                               .update(createUsersRecordData(
                                 email: widget!.emailSignup,
                                 displayName: widget!.nameSignup,
-                                photoUrl:
-                                    'https://firebasestorage.googleapis.com/v0/b/gdg-dit-rlb405.appspot.com/o/gray-user-profile-icon-png-fP8Q1P.png?alt=media&token=c1674fcc-6a76-4214-84c3-54592aafbaac',
+                                photoUrl: '',
                                 createdTime: getCurrentTimestamp,
                                 password: widget!.passwordSignup,
                                 passOutYear: widget!.passOutYearSignup,
