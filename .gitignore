@@ -1,0 +1,26 @@
+# Flutter build files
+/build/
+
+# Firebase files
+# Firebase configuration files (do not upload your GoogleService-Info or google-services.json)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Flutter and Dart tools
+.dart_tool/
+.packages
+
+# Android specific build files
+android/app/build/
+
+# Flutter plugin files
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE specific files
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
