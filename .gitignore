@@ -1,5 +1,6 @@
 # Flutter build files
 /build/
+/macos/
 
 # Firebase files
 # Firebase configuration files (do not upload your GoogleService-Info or google-services.json)

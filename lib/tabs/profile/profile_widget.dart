@@ -1,3 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:gdg_dit/authentication/auth_3_create/auth3_create_model.dart';
+import 'package:gdg_dit/flutter_flow/flutter_flow_drop_down.dart';
+import 'package:gdg_dit/flutter_flow/form_field_controller.dart';
+
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
@@ -88,6 +93,29 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 18.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Profile',
+                              style: Theme.of(context)
+                                  .primaryTextTheme
+                                  .headlineSmall!
+                                  .copyWith(color: Colors.black),
+                            ),
+                            const Spacer(),
+                            IconButton(
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (ctx) {
+                                    return EditProfile();
+                                  }));
+                                },
+                                icon: Icon(Icons.edit))
+                          ],
+                        ),
+                      ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 0.0),
@@ -515,6 +543,255 @@ class _ProfileWidgetState extends State<ProfileWidget> {
           ),
         );
       },
+    );
+  }
+}
+
+class EditProfile extends StatefulWidget {
+  const EditProfile({super.key});
+
+  @override
+  State<EditProfile> createState() => _EditProfileState();
+}
+
+class _EditProfileState extends State<EditProfile> {
+  late ProfileModel _model;
+  TextEditingController _name = TextEditingController();
+  TextEditingController _passoutyear = TextEditingController();
+  TextEditingController _bio = TextEditingController();
+  TextEditingController _tech = TextEditingController();
+  TextEditingController _insta = TextEditingController();
+  TextEditingController _linkedin = TextEditingController();
+  TextEditingController _github = TextEditingController();
+  late Auth3CreateModel _model2;
+
+  @override
+  void initState() {
+    _model2 = createModel(context, () => Auth3CreateModel());
+    super.initState();
+  }
+
+  void _saveChanges(String uid) async {
+    FirebaseFirestore.instance.collection('users').doc(uid).update({
+      'display_name': _name.text,
+      'passOutYear': _passoutyear.text,
+      'techStackExpertise': _tech.text,
+      'github': _github.text,
+      'linkedin': _linkedin.text,
+      'department': _model2.departmentSignupValue
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Edit Profile'),
+        centerTitle: true,
+        leading: TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back)),
+        actions: [
+          TextButton(
+            onPressed: () {
+              _saveChanges(FirebaseAuth.instance.currentUser!.uid);
+            },
+            child: Text(
+              "Save",
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
+        ],
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
+      body: SingleChildScrollView(
+        child: StreamBuilder(
+            stream: queryUsersRecord(
+              queryBuilder: (usersRecord) => usersRecord.where(
+                'uid',
+                isEqualTo: currentUserUid,
+              ),
+              singleRecord: true,
+            ),
+            builder: (ctx, snapshot) {
+              List<UsersRecord> profileUsersRecordList = snapshot.data!;
+              final profileUsersRecord = profileUsersRecordList.isNotEmpty
+                  ? profileUsersRecordList.first
+                  : null;
+              _name.text = profileUsersRecord!.displayName;
+              _bio.text = profileUsersRecord.shortDescription;
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Stack(
+                        children: [
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundImage:
+                                NetworkImage(profileUsersRecord.photoUrl ?? ''),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: InkWell(
+                              onTap: () async {
+                                // Image picker logic
+                              },
+                              child: CircleAvatar(
+                                radius: 15,
+                                backgroundColor: Colors.grey[200],
+                                child: Icon(Icons.camera_alt, size: 15),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    buildTextField("Name", _name),
+                    // buildTextField("Bio", _bio, maxLines: 4),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Department'.toUpperCase(),
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey[600],
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          FlutterFlowDropDown<String>(
+                            controller:
+                                _model2.departmentSignupValueController ??=
+                                    FormFieldController<String>(null),
+                            options: [
+                              'Electronics & Telecommunication',
+                              'Computer Engineering',
+                              'Information Technology',
+                              'Instrumentation Engineering',
+                              'Mechanical Engineering',
+                              'Civil Engineering',
+                              'Electrical Engineering',
+                              'Automation and Robotics',
+                              'Artificial Intelligence & Data Science'
+                            ],
+                            onChanged: (val) => safeSetState(
+                                () => _model2.departmentSignupValue = val),
+                            width: double.infinity,
+                            height: 40.0,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Inter',
+                                  fontSize: 16.0,
+                                  letterSpacing: 0.0,
+                                  lineHeight: 1.5,
+                                ),
+                            hintText: 'Select Department',
+                            icon: Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 24.0,
+                            ),
+                            fillColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            elevation: 2.0,
+                            borderColor: Colors.transparent,
+                            borderWidth: 0.0,
+                            borderRadius: 8.0,
+                            margin: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 12.0, 0.0),
+                            hidesUnderline: true,
+                            isOverButton: false,
+                            isSearchable: false,
+                            isMultiSelect: false,
+                          ),
+                        ],
+                      ),
+                    ),
+                    buildTextField("Tech Expertise", _tech),
+                    buildTextField("Passout Year", _passoutyear),
+                    SizedBox(height: 20),
+                    Text(
+                      'Social Handles',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          decoration: TextDecoration.underline),
+                    ),
+                    SizedBox(height: 20),
+                    buildSocialTextField(
+                        _linkedin, "Linkedin", "assets/images/174857.png"),
+                    buildSocialTextField(
+                        _github, "GitHub", "assets/images/25231.png"),
+                  ],
+                ),
+              );
+            }),
+      ),
+    );
+  }
+
+  Widget buildTextField(String label, TextEditingController controller,
+      {int maxLines = 1}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label.toUpperCase(),
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey[600],
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 8),
+          TextField(
+            controller: controller,
+            maxLines: maxLines,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              contentPadding:
+                  EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildSocialTextField(TextEditingController controller, String platform,
+      String assetImagePath) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15.0),
+      child: TextField(
+        controller: controller,
+        decoration: InputDecoration(
+          icon: ImageIcon(AssetImage(assetImagePath)),
+          hintText: platform,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+      ),
     );
   }
 }

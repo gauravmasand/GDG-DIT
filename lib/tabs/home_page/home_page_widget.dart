@@ -1,3 +1,6 @@
+import 'package:draggable_fab/draggable_fab.dart';
+import 'package:gdg_dit/widgets/chatbot.dart';
+import 'package:http/http.dart' as http;
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -43,6 +46,21 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
+          floatingActionButton: DraggableFab(
+            child: FloatingActionButton(
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  backgroundColor: Colors.transparent,
+                  builder: (BuildContext context) {
+                    return ChatBotPopup();
+                  },
+                );
+              },
+              child: Icon(Icons.chat),
+            ),
+          ),
           key: scaffoldKey,
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           appBar: AppBar(
